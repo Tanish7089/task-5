@@ -2,7 +2,6 @@ document.getElementById('locationForm').addEventListener('submit', function(e) {
     e.preventDefault();
     let locationInput = document.getElementById('locationInput').value;
 
-    // Replace with your API key and preferred weather API endpoint
     let apiKey = 'YOUR_API_KEY';
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${locationInput}&appid=${apiKey}&units=metric`;
 
@@ -14,7 +13,7 @@ document.getElementById('locationForm').addEventListener('submit', function(e) {
             return response.json();
         })
         .then(data => {
-            // Process data and update the UI
+
             displayWeather(data);
         })
         .catch(error => {
